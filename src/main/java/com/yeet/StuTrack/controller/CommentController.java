@@ -86,7 +86,7 @@ public class CommentController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Response> deleteComment(@PathVariable Long id, @AuthenticationPrincipal UserPrincipal principal){
 
-        Optional<Comment> comment = commentService.getCommentById(id);;
+        Optional<Comment> comment = commentService.getCommentById(id);
 
         boolean delete = false;
         boolean commentFound = comment.isPresent();
